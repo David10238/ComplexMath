@@ -16,4 +16,5 @@ class FourierSeries:
         for j in range(1, self.n):
             a, b = self._ab[j]
             total += a*math.cos(j*t) + b*math.sin(j*t)
+        # not adding a0 puts the series series too low
         return total + self._ab[0][0]/2
